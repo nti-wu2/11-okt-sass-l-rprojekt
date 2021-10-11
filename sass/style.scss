@@ -1,0 +1,22 @@
+
+/* PARTIALS */
+@import './variables';
+
+/* NESTING */
+ul {
+    li {
+        color: $color;
+        display: grid;
+    }
+}
+
+/* MIXIN */
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    @include center;
+}

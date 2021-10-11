@@ -1,0 +1,17 @@
+/* COLORS */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Frank+Ruhl+Libre:wght@900&display=swap");
+:root {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,11 +1,156 @@
 /* COLORS */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Frank+Ruhl+Libre:wght@900&display=swap");
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-top: 2rem;
+  background-color: #FFF;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999rem;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 18rem 18rem;
+      grid-template-rows: 18rem 18rem;
+      grid-template-areas: "covered covered covered offer offer offer" "covered covered covered join join join";
+}
+
+main article.covered {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: covered;
+  background-color: #C7DDEA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("../img/family.png");
+  background-repeat: no-repeat;
+  background-position: 90% bottom;
+}
+
+main article.covered section {
+  max-width: 20rem;
+}
+
+main article.offer {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: offer;
+  background-color: #F17949;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main article.join {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: join;
+  background-color: #FAB131;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* COLORS */
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-top: 2rem;
+  background-color: #FFF;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999rem;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* COLORS */
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-top: 2rem;
+  background-color: #FFF;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999rem;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
 :root {
   font-family: 'Fira Sans', sans-serif;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Frank Ruhl Libre', serif;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 100%;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  color: #FFF;
+}
+
+p {
+  line-height: 160%;
 }
 
 *, html {

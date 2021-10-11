@@ -1,0 +1,41 @@
+@import './variables';
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: $baseline*6 $baseline*6 ;
+    grid-template-areas: 
+    "covered covered covered offer offer offer"
+    "covered covered covered join join join";
+
+    article {
+
+        &.covered {
+            grid-area: covered;
+            background-color: $blue;
+            @include center;
+            background-image: url('../img/family.png');
+            background-repeat: no-repeat;
+            background-position: 90% bottom;
+
+            section {
+                max-width: 20rem;
+            }
+        }
+
+        &.offer {
+            grid-area: offer;
+            background-color: $rust;
+            @include center;
+        }
+
+        &.join {
+           grid-area: join;
+           background-color: $yellow;
+           @include center;
+        }
+
+    }
+}

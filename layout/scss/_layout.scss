@@ -5,11 +5,12 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: $baseline*6 $baseline*6 $baseline ;
+    grid-template-rows: $baseline*6 $baseline*6 $baseline $baseline*12;
     grid-template-areas: 
     "covered covered covered offer offer offer"
     "covered covered covered join join join"
-    "nav nav nav nav nav nav";
+    "nav nav nav nav nav nav"
+    "safety safety safety safety safety safety";
 
     article {
 
@@ -37,7 +38,77 @@ main {
            background-color: $yellow;
            @include center;
         }
+    }
 
+    .safety {
+        grid-area: safety;
+        background-color: $cement;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        article {
+
+            &.left {
+                color: white;
+                padding: 4rem;
+            }
+
+            &.right {
+                padding: 4rem;
+            }
+
+            &.bottom {
+                background: blue;
+            }
+
+        }
+
+        .cards {
+            background: hotpink;
+            grid-column: auto / span 2;
+            @include center;
+            flex-direction: row;
+            gap: 1rem;
+
+            > article {
+                background: $white;
+                max-width: 16rem;
+                width: 100%;
+                border-radius: $radius;
+                padding: .5rem;
+                height: 20rem;
+
+                figure {
+                    background: $yellow;
+                    height: 10rem;
+                    @include center;
+                    justify-content: flex-end;
+                    border-radius: $radius/2;
+                    margin-top: -3rem;
+
+                    &.dude {
+                        background: $blue;
+                    }
+
+                    &.old {
+                        background: $rust;
+                    }
+                }
+
+                h2 {
+                    font-size: 1.4rem;
+                    color: $black;
+                    text-align: center;
+                    padding: 1rem 0 .5rem 0;
+                }
+
+                p {
+                    font-size: .8rem;
+                    opacity: .6;
+                    text-align: center;
+                }
+            }
+        }
     }
 
     nav {

@@ -6,10 +6,12 @@ $yellow: #FAB131;
 $grey: #E5E5E5;
 $lightGrey: #EBEBEB;
 $darkGrey: #777;
+$cement: #A9A19E;
 $white: #FFF;
 $black: #000;
 
 $baseline: 3rem;
+$radius: .5rem;
 
 @mixin center {
     display: flex;

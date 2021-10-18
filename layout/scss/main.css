@@ -22,9 +22,9 @@ main {
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
-  -ms-grid-rows: 18rem 18rem 3rem;
-      grid-template-rows: 18rem 18rem 3rem;
-      grid-template-areas: "covered covered covered offer offer offer" "covered covered covered join join join" "nav nav nav nav nav nav";
+  -ms-grid-rows: 18rem 18rem 3rem 36rem;
+      grid-template-rows: 18rem 18rem 3rem 36rem;
+      grid-template-areas: "covered covered covered offer offer offer" "covered covered covered join join join" "nav nav nav nav nav nav" "safety safety safety safety safety safety";
 }
 
 main article.covered {
@@ -96,6 +96,104 @@ main article.join {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+main .safety {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: safety;
+  background-color: #A9A19E;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+main .safety article.left {
+  color: white;
+  padding: 4rem;
+}
+
+main .safety article.right {
+  padding: 4rem;
+}
+
+main .safety article.bottom {
+  background: blue;
+}
+
+main .safety .cards {
+  background: hotpink;
+  grid-column: auto / span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+main .safety .cards > article {
+  background: #FFF;
+  max-width: 16rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: .5rem;
+  height: 20rem;
+}
+
+main .safety .cards > article figure {
+  background: #FAB131;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 0.25rem;
+  margin-top: -3rem;
+}
+
+main .safety .cards > article figure.dude {
+  background: #C7DDEA;
+}
+
+main .safety .cards > article figure.old {
+  background: #F17949;
+}
+
+main .safety .cards > article h2 {
+  font-size: 1.4rem;
+  color: #000;
+  text-align: center;
+  padding: 1rem 0 .5rem 0;
+}
+
+main .safety .cards > article p {
+  font-size: .8rem;
+  opacity: .6;
+  text-align: center;
 }
 
 main nav {

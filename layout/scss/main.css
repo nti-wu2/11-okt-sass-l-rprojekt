@@ -124,7 +124,7 @@ main article.about h1 {
   margin: 2rem 0;
 }
 
-main article.about > p {
+main article.about p {
   max-width: 30rem;
   width: 100%;
   margin: .5rem 0;

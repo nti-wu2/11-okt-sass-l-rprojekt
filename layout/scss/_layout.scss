@@ -5,12 +5,13 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: $baseline*6 $baseline*6 $baseline $baseline*12;
-    grid-template-areas: 
+    grid-template-rows: $baseline*6 $baseline*6 $baseline $baseline*12 $baseline*12;
+    grid-template-areas:
     "covered covered covered offer offer offer"
     "covered covered covered join join join"
     "nav nav nav nav nav nav"
-    "safety safety safety safety safety safety";
+    "safety safety safety safety safety safety"
+    "about about about about about about";
 
     article {
 
@@ -38,6 +39,23 @@ main {
            background-color: $yellow;
            @include center;
         }
+
+        &.about {
+            grid-area: about;
+            background-color: $yellow;
+            @include center;
+
+            h1 {
+                color: white;
+                margin: 2rem 0;
+            }
+
+            > p {
+                max-width: 30rem;
+                width: 100%;
+                margin: .5rem 0;  
+            }
+        }
     }
 
     .safety {
@@ -57,18 +75,14 @@ main {
                 padding: 4rem;
             }
 
-            &.bottom {
-                background: blue;
-            }
-
         }
 
         .cards {
-            background: hotpink;
             grid-column: auto / span 2;
             @include center;
             flex-direction: row;
             gap: 1rem;
+            position: relative;
 
             > article {
                 background: $white;
@@ -77,6 +91,7 @@ main {
                 border-radius: $radius;
                 padding: .5rem;
                 height: 20rem;
+                margin-bottom: -10rem;
 
                 figure {
                     background: $yellow;
@@ -110,7 +125,7 @@ main {
             }
         }
     }
-
+    
     nav {
         grid-area: nav;
         @include center;

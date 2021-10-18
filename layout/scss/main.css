@@ -22,9 +22,9 @@ main {
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
-  -ms-grid-rows: 18rem 18rem 3rem 36rem;
-      grid-template-rows: 18rem 18rem 3rem 36rem;
-      grid-template-areas: "covered covered covered offer offer offer" "covered covered covered join join join" "nav nav nav nav nav nav" "safety safety safety safety safety safety";
+  -ms-grid-rows: 18rem 18rem 3rem 36rem 36rem;
+      grid-template-rows: 18rem 18rem 3rem 36rem 36rem;
+      grid-template-areas: "covered covered covered offer offer offer" "covered covered covered join join join" "nav nav nav nav nav nav" "safety safety safety safety safety safety" "about about about about about about";
 }
 
 main article.covered {
@@ -98,6 +98,38 @@ main article.join {
           flex-direction: column;
 }
 
+main article.about {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: about;
+  background-color: #FAB131;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main article.about h1 {
+  color: white;
+  margin: 2rem 0;
+}
+
+main article.about > p {
+  max-width: 30rem;
+  width: 100%;
+  margin: .5rem 0;
+}
+
 main .safety {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -119,12 +151,7 @@ main .safety article.right {
   padding: 4rem;
 }
 
-main .safety article.bottom {
-  background: blue;
-}
-
 main .safety .cards {
-  background: hotpink;
   grid-column: auto / span 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +168,7 @@ main .safety .cards {
           flex-direction: column;
   flex-direction: row;
   gap: 1rem;
+  position: relative;
 }
 
 main .safety .cards > article {
@@ -150,6 +178,7 @@ main .safety .cards > article {
   border-radius: 0.5rem;
   padding: .5rem;
   height: 20rem;
+  margin-bottom: -10rem;
 }
 
 main .safety .cards > article figure {

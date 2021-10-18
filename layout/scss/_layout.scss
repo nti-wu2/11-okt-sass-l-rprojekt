@@ -5,10 +5,11 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: $baseline*6 $baseline*6 ;
+    grid-template-rows: $baseline*6 $baseline*6 $baseline ;
     grid-template-areas: 
     "covered covered covered offer offer offer"
-    "covered covered covered join join join";
+    "covered covered covered join join join"
+    "nav nav nav nav nav nav";
 
     article {
 
@@ -37,5 +38,22 @@ main {
            @include center;
         }
 
+    }
+
+    nav {
+        grid-area: nav;
+        @include center;
+        flex-direction: row;
+
+        a {
+            margin: 0 2rem;
+            text-decoration: none;
+            color: $black;
+            opacity: .5;
+
+            &.active {
+                opacity: 1;
+            }
+        }
     }
 }
